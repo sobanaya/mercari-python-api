@@ -103,8 +103,9 @@ def _get_soup(url: str) -> BeautifulSoup:
                              "(KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36'"}
     response = requests.get(url, headers=headers, timeout=20)
     if response.status_code != 200:
-        logger.error(response)
-        raise ConnectionError()
+        # logger.error(response)
+        # raise ConnectionError()
+        print('売り切れの可能性')
     soup = BeautifulSoup(response.content, 'lxml')
     return soup
 

@@ -86,13 +86,14 @@ class Mercari(Common):
             price_min: Union[None, int] = None,
             price_max: Union[None, int] = None
     ):
-        url = f'https://www.mercari.com/jp/search/?page={page}'
-        url += f'&keyword={keyword}'
-        url += '&sort_order='
-        if price_max is not None:
-            url += f'&price_max={price_max}'
-        if price_min is not None:
-            url += f'&price_min={price_min}'
+        url = 'https://www.mercari.com/jp/u/995921984/'
+        # url = f'https://www.mercari.com/jp/search/?page={page}'
+        # url += f'&keyword={keyword}'
+        # url += '&sort_order='
+        # if price_max is not None:
+        #     url += f'&price_max={price_max}'
+        # if price_min is not None:
+        #     url += f'&price_min={price_min}'
         return url
 
     @property
